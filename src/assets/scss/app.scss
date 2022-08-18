@@ -1,9 +1,36 @@
-@import './variables';
-@import './libs/normalize';
-@import './components/all';
+@import './vars';
+@import './vendor/normalize';
+@import './blocks/all';
+
+html {
+  font-size: 62.5%;
+}
 
 body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+
   background-color: $background;
+
+  font-family: 'Nunito', Roboto, system-ui, Tahoma, sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+ol,
+ul {
+  list-style: none;
 }
 
 .wrapper {
@@ -52,8 +79,8 @@ body {
 .cart {
   &__top {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
   }
 
   .content__title {
@@ -62,11 +89,13 @@ body {
     font-size: 32px;
 
     svg {
-      position: relative;
-      top: -2px;
       width: 30px;
       height: 30px;
       margin-right: 10px;
+
+      position: relative;
+      top: -2px;
+
       path {
         stroke: $black;
         stroke-width: 1.9;
@@ -77,20 +106,22 @@ body {
   &__clear {
     display: flex;
     align-items: center;
+
     cursor: pointer;
     @include noselect();
 
     span {
       display: inline-block;
       margin-left: 7px;
-      color: #b6b6b6;
+
       font-size: 18px;
+      color: #b6b6b6;
     }
 
     span,
     svg,
     path {
-      transition: all $duration ease-in-out;
+      transition: all $duration linear;
     }
 
     &:hover {
@@ -103,6 +134,11 @@ body {
         color: darken($color: #b6b6b6, $amount: 50);
       }
     }
+  }
+
+  .content__items {
+    display: flex;
+    flex-direction: column;
   }
 
   &__item {
@@ -269,43 +305,6 @@ body {
         width: 210px;
         padding: 16px;
       }
-    }
-  }
-
-  &--empty {
-    margin: 0 auto;
-    width: 560px;
-    text-align: center;
-
-    h2 {
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 18px;
-      line-height: 145.4%;
-      letter-spacing: 0.01em;
-      color: #777777;
-    }
-
-    icon {
-      position: relative;
-      top: 2px;
-    }
-
-    img {
-      display: block;
-      width: 300px;
-      margin: 45px auto 60px;
-    }
-
-    .button--black {
-      padding: 12px 0 14px;
-      width: 230px;
-      margin: 0 auto;
-      font-weight: 600;
-      font-size: 18px;
     }
   }
 }
