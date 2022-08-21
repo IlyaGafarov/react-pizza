@@ -1,0 +1,55 @@
+.root {
+  position: relative;
+}
+
+.input {
+  display: inline-block;
+  width: 280px;
+  padding: 8px 25px;
+
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  font-family: inherit;
+  font-size: 14px;
+
+  transition: border 0.1s linear;
+
+  &:focus {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+  }
+}
+
+.icon {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+
+  opacity: 0.5;
+
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  z-index: 1;
+}
+
+.clearSearch {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+
+  opacity: 0.5;
+
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 1;
+
+  cursor: pointer;
+  transition: opacity 0.2s linear;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

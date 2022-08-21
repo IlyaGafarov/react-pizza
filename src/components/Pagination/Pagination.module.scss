@@ -1,0 +1,31 @@
+.root {
+  display: flex;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+
+    border: 1px solid #ccc;
+
+    font-family: inherit;
+    font-size: inherit;
+
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+
+    &:hover {
+      border: 1px solid #ffdf8c;
+      background-color: #ffdf8c;
+    }
+  }
+
+  :global {
+    .selected {
+      a {
+        background-color: #ffdf8c;
+      }
+    }
+  }
+}

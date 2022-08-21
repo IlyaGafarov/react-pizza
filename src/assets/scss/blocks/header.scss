@@ -1,8 +1,11 @@
 @import '../vars';
 
 .header {
-  border-bottom: 1px solid $gray-line;
+  display: flex;
+  justify-content: space-between;
   padding: 40px 0;
+
+  border-bottom: 1px solid $gray-line;
 
   .container {
     display: flex;
@@ -12,6 +15,7 @@
 
   &__logo {
     display: flex;
+    margin-right: 100px;
 
     img {
       margin-right: 15px;
@@ -31,4 +35,9 @@
       color: #7b7b7b;
     }
   }
+}
+
+.header__left {
+  display: flex;
+  align-items: center;
 }
