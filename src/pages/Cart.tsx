@@ -7,10 +7,10 @@ import { clearItems, selectCart } from '../redux/slices/cartSlice'
 import CartItem from '../components/CartItem'
 import CartEmpty from '../components/CartEmpty'
 
-const Cart = () => {
+const Cart: React.FC = () => {
   const dispatch = useDispatch()
   const { totalPrice, items } = useSelector(selectCart)
-  const totalCount = items.reduce((sum, item) => sum + item.count, 0)
+  const totalCount = items.reduce((sum: number, item: any) => sum + item.count, 0)
 
   function onClickClear() {
     if (window.confirm('очистить корзину?')) {
@@ -37,7 +37,7 @@ const Cart = () => {
         </div>
 
         <div className="content__items">
-          {items.map((item, id) => (
+          {items.map((item: any, id: string) => (
             <CartItem key={id} {...item} />
           ))}
         </div>
