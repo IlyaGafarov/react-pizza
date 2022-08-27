@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { clearItems, selectCart } from '../redux/slices/cartSlice'
 
 import CartItem from '../components/CartItem'
-import CartEmpty from '../components/CartEmpty'
+import CartEmpty from '../components/CartEmpty/CartEmpty'
 
 const Cart: React.FC = () => {
   const dispatch = useDispatch()
@@ -37,8 +37,8 @@ const Cart: React.FC = () => {
         </div>
 
         <div className="content__items">
-          {items.map((item: any, id: string) => (
-            <CartItem key={id} {...item} />
+          {items.map((item: any) => (
+            <CartItem key={item.id} {...item} />
           ))}
         </div>
 

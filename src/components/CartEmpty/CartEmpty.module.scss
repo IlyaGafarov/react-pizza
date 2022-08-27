@@ -1,0 +1,55 @@
+.cartEmpty {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 2rem;
+
+  font-size: 3.8rem;
+  font-weight: 800;
+}
+
+.description {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.cartImg {
+  display: block;
+  max-width: 42rem;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 3rem;
+}
+
+.btnLink {
+  display: inline-block;
+  vertical-align: top;
+  padding: 1.12em 2.1em;
+
+  border: none;
+  background: #fe5f1e;
+  border-radius: 1rem;
+
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 1.1;
+  font-weight: 500;
+  color: #fff;
+
+  cursor: pointer;
+  transition: background 0.2s linear;
+
+  &:hover,
+  &:focus {
+    background: darken(#fe5f1e, 5%);
+  }
+}

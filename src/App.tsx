@@ -3,11 +3,11 @@ import './assets/scss/app.scss'
 
 import Home from './pages/Home'
 import Cart from './pages/Cart'
-import FullPizza from './pages/FullPizza'
 import NotFound from './pages/NotFound'
+import FullPizza from './pages/FullPizza'
 import MainLayout from './layouts/MainLayout'
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <Routes>
       <Route path="/" element={<MainLayout />}>

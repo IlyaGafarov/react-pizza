@@ -8,7 +8,7 @@ const FullPizza: React.FC = () => {
     title: string
     price: number
   }>()
-  
+
   const { id } = useParams()
   const navigate = useNavigate()
 
@@ -24,6 +24,7 @@ const FullPizza: React.FC = () => {
     }
 
     fetchPizza()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   if (!pizza) {
