@@ -6,7 +6,7 @@ import pizzaSearch from '../../assets/img/pizza-search.svg'
 import clearSearch from '../../assets/img/clear-search.svg'
 
 import { useDispatch } from 'react-redux'
-import { setSearchValue } from '../../redux/slices/filterSlice'
+import { setSearchValue } from '../../redux/filter/slice'
 
 const Search: React.FC = () => {
   const dispatch = useDispatch()

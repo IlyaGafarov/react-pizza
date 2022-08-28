@@ -1,15 +1,17 @@
 import React from 'react'
-
 import { useSelector } from 'react-redux'
-import { selectFilter, setCategoryId, setCurrentPage } from '../redux/slices/filterSlice'
-import { fetchPizzas, selectPizzaData } from '../redux/slices/pizzaSlice'
 
 import Sort from '../components/Sort'
 import Categories from '../components/Categories'
 import Skeleton from '../components/PizzaBlock/Skeleton'
 import PizzaBlock from '../components/PizzaBlock/PizzaBlock'
 import Pagination from '../components/Pagination/Pagination'
+
 import { useAppDispatch } from '../redux/store'
+import { selectPizzaData } from '../redux/pizza/selectors'
+import { selectFilter } from '../redux/filter/selectors'
+import { setCategoryId, setCurrentPage } from '../redux/filter/slice'
+import { fetchPizzas } from '../redux/pizza/asyncActions'
 
 const Home: React.FC = () => {
   const dispatch = useAppDispatch()
@@ -18,7 +20,7 @@ const Home: React.FC = () => {
 
   const onChangeCategory = React.useCallback((id: number) => {
     dispatch(setCategoryId(id))
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   function onChangePage(page: number) {
