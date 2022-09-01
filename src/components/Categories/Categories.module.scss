@@ -1,0 +1,31 @@
+.categories {
+  display: flex;
+
+  li {
+    padding: 1.3rem 3rem;
+    margin-right: 1.3rem;
+
+    border-radius: 1rem;
+    background-color: #f9f9f9;
+
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: background-color 0.1s linear;
+
+    &:hover {
+      background-color: darken(#f9f9f9, 2%);
+    }
+
+    &:active {
+      background-color: #fe5f1e;
+    }
+
+    &.active {
+      background-color: #fe5f1e;
+      box-shadow: 0 7px 17px -10px rgba(#fe5f1e, 0.8);
+
+      color: #fff;
+    }
+  }
+}

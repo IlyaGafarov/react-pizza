@@ -1,12 +1,12 @@
 import React, { Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom'
-import './assets/scss/app.scss'
+import './assets/scss/style.scss'
 
 import Home from './pages/Home'
 import MainLayout from './layouts/MainLayout'
 
-const Cart = React.lazy(() => import('./pages/Cart'))
-const FullPizza = React.lazy(() => import('./pages/FullPizza'))
+const Cart = React.lazy(() => import('./pages/Cart/Cart'))
+const FullPizza = React.lazy(() => import('./pages/FullPizza/FullPizza'))
 const NotFound = React.lazy(() => import('./pages/NotFound'))
 
 function App() {
@@ -32,7 +32,7 @@ function App() {
             </Suspense>
           }
         />
-        
+
         <Route
           path="*"
           element={

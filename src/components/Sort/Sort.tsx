@@ -1,7 +1,9 @@
 import React from 'react'
+import cl from './Sort.module.scss'
+
 import { useDispatch } from 'react-redux'
-import { setSort } from '../redux/filter/slice'
-import { Sort, sortPropertyEnum } from '../redux/filter/types'
+import { setSort } from '../../redux/filter/slice'
+import { Sort, sortPropertyEnum } from '../../redux/filter/types'
 
 type SortItem = {
   name: string
@@ -13,12 +15,12 @@ type SortPopupProps = {
 }
 
 export const list: SortItem[] = [
-  { name: 'популярности (DESC)', sortProperty: sortPropertyEnum.RATING_DESC },
-  { name: 'популярности (ASC)', sortProperty: sortPropertyEnum.RATING_ASC },
-  { name: 'цене (DESC)', sortProperty: sortPropertyEnum.PRICE_DESC },
-  { name: 'цене (ASC)', sortProperty: sortPropertyEnum.PRICE_ASC },
-  { name: 'алфавиту (DESC)', sortProperty: sortPropertyEnum.TITLE_DESC },
-  { name: 'алфавиту (ASC)', sortProperty: sortPropertyEnum.TITLE_ASC },
+  { name: 'популярности', sortProperty: sortPropertyEnum.RATING_DESC },
+  // { name: 'популярности (ASC)', sortProperty: sortPropertyEnum.RATING_ASC },
+  { name: 'цене (дороже)', sortProperty: sortPropertyEnum.PRICE_DESC },
+  { name: 'цене (дешевле)', sortProperty: sortPropertyEnum.PRICE_ASC },
+  // { name: 'алфавиту (DESC)', sortProperty: sortPropertyEnum.TITLE_DESC },
+  // { name: 'алфавиту (ASC)', sortProperty: sortPropertyEnum.TITLE_ASC },
 ]
 
 const SortPopup: React.FC<SortPopupProps> = React.memo(({ value }) => {
@@ -46,20 +48,20 @@ const SortPopup: React.FC<SortPopupProps> = React.memo(({ value }) => {
   }, [])
 
   return (
-    <div ref={sortRef} className="sort">
-      <div className="sort__label">
-        <b>Сортировать по:</b>
+    <div ref={sortRef} className={cl.sort}>
+      <div className={cl.label}>
+        <p className={cl.sortSection}>Сортировать по:</p>
         <span onClick={() => setOpen(!open)}>{value.name}</span>
       </div>
 
       {open && (
-        <div className="sort__popup">
-          <ul>
+        <div className={cl.popup}>
+          <ul className={cl.popupList}>
             {list.map((obj, i) => (
               <li
                 key={i}
                 onClick={() => onClickListItem(obj)}
-                className={value.sortProperty === obj.sortProperty ? 'active' : ''}>
+                className={value.sortProperty === obj.sortProperty ? `${cl.active}` : ''}>
                 {obj.name}
               </li>
             ))}

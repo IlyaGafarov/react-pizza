@@ -1,6 +1,7 @@
 import React from 'react'
+import cl from './Categories.module.scss'
 
-const categories = ['все', 'Мясные', 'Вегетарианские', 'Гриль', 'Острые', 'Закрытые']
+const categories = ['Все', 'Мясные', 'Вегетарианские', 'Гриль', 'Острые', 'Закрытые']
 
 type CategoriesProps = {
   value: number
@@ -9,15 +10,18 @@ type CategoriesProps = {
 
 const Categories: React.FC<CategoriesProps> = React.memo(({ value, onChangeCategory }) => {
   return (
-    <div className="categories">
-      <ul>
+    <>
+      <ul className={cl.categories}>
         {categories.map((categoryName, i) => (
-          <li key={i} onClick={() => onChangeCategory(i)} className={i === value ? 'active' : ''}>
+          <li
+            key={i}
+            onClick={() => onChangeCategory(i)}
+            className={i === value ? `${cl.active}` : ''}>
             {categoryName}
           </li>
         ))}
       </ul>
-    </div>
+    </>
   )
 })
 

@@ -1,18 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import style from './CartEmpty.module.scss'
+import cl from './CartEmpty.module.scss'
 import cartEmpty from '../../assets/img/empty-cart.png'
 
 const CartEmpty: React.FC = () => {
 	return (
-		<div className={style.cartEmpty}>
-			<h2 className={style.title}>Корзина пустая</h2>
-			<p className={style.description}>
+		<div className={cl.cartEmpty}>
+			<h2 className={cl.title}>Корзина пустая</h2>
+			<p className={cl.description}>
 				Чтобы заказать пиццу, вернитесь на главную страницу.
 			</p>
-			<img className={style.cartImg} src={cartEmpty} alt="" />
+			<img className={cl.cartImg} src={cartEmpty} alt="" />
 
-			<Link to="/" className={style.btnLink}>
+			<Link to="/" className={cl.btnLink}>
 				<p>Вернуться назад</p>
 			</Link>
 		</div>

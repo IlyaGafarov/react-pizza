@@ -1,8 +1,8 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 
-import Sort from '../components/Sort'
-import Categories from '../components/Categories'
+import Sort from '../components/Sort/Sort'
+import Categories from '../components/Categories/Categories'
 import Skeleton from '../components/PizzaBlock/Skeleton'
 import PizzaBlock from '../components/PizzaBlock/PizzaBlock'
 import Pagination from '../components/Pagination/Pagination'
@@ -61,9 +61,8 @@ const Home: React.FC = () => {
         <Sort value={sort} />
       </div>
 
-      <h2 className="content__title">Все пиццы</h2>
       {status === 'error' ? (
-        <h2>Ошибочка вышла, не повезло, не фартануло :(</h2>
+        <h2>Ошибочка вышла, не повезло, не фартануло</h2>
       ) : (
         <div className="content__items">{status === 'loading' ? skeletons : pizzas}</div>
       )}

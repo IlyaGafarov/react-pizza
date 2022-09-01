@@ -1,9 +1,11 @@
 import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { selectCartItemById } from '../../redux/cart/selectors'
+import cl from './PizzaBlock.module.scss'
+
+import { useSelector, useDispatch } from 'react-redux'
 import { addItem } from '../../redux/cart/slice'
 import { CartItem } from '../../redux/cart/types'
+import { selectCartItemById } from '../../redux/cart/selectors'
 
 const typeNames = ['тонкое', 'традиционное']
 
@@ -39,40 +41,40 @@ const PizzaBlock: React.FC<PizzaBlockProps> = ({ id, title, price, imageUrl, siz
   }
 
   return (
-    <div className="pizza-block">
+    <div className={cl.block}>
       <Link to={`/pizza/${id}`}>
-        <img className="pizza-block__image" src={imageUrl} alt="Pizza" />
-        <h4 className="pizza-block__title">{title}</h4>
+        <img className={cl.image} src={imageUrl} alt="тут Пицца :)" />
+        <h4 className={cl.title}>{title}</h4>
       </Link>
 
-      <div className="pizza-block__selector">
-        <ul>
+      <div className={cl.selector}>
+        <ul className={cl.list}>
           {types.map((typeId, i) => (
             <li
               key={i}
               onClick={() => setActiveType(i)}
-              className={activeType === i ? 'active' : ''}>
+              className={activeType === i ? `${cl.active}` : ''}>
               {typeNames[typeId]}
             </li>
           ))}
         </ul>
 
-        <ul>
+        <ul className={cl.list}>
           {sizes.map((size, i) => (
             <li
               key={i}
               onClick={() => setActiveSize(i)}
-              className={activeSize === i ? 'active' : ''}>
+              className={activeSize === i ? `${cl.active}` : ''}>
               {size} см.
             </li>
           ))}
         </ul>
       </div>
 
-      <div className="pizza-block__bottom">
-        <div className="pizza-block__price">от {price} ₽</div>
-        <button onClick={onClickAdd} className="button button--outline button--add">
-          <span>Добавить</span>
+      <div className={cl.footer}>
+        <div className={cl.price}>от {price} ₽</div>
+        <button onClick={onClickAdd} className={cl.btn}>
+          Добавить
           {addedCount > 0 && <i>{addedCount}</i>}
         </button>
       </div>

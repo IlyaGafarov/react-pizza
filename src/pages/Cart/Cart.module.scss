@@ -1,0 +1,112 @@
+.cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 82rem;
+  margin: 8rem auto;
+}
+
+.cartTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3.3rem;
+}
+
+.cartTitle {
+  margin-left: 3rem;
+  font-size: 3.5rem;
+}
+
+.cartClear {
+  cursor: pointer;
+
+  span {
+    display: inline-block;
+    margin-right: 3rem;
+
+    font-size: 2rem;
+    color: #b6b6b6;
+
+    transition: color 0.1s linear;
+
+    &:hover {
+      color: darken($color: #b6b6b6, $amount: 50);
+    }
+  }
+}
+
+.contentItems {
+  display: flex;
+  flex-direction: column;
+}
+
+.cartFooter {
+  margin: 5rem 0;
+}
+
+.cartFooterDetails {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 5rem;
+
+  span {
+    font-size: 2.2rem;
+
+    &:last-of-type {
+      b {
+        color: #fe5f1e;
+      }
+    }
+  }
+}
+
+.cartFooterBtns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btnBack,
+.btnPay {
+  display: inline-block;
+  vertical-align: top;
+
+  border-radius: 1rem;
+  background-color: #fff;
+  border: 1px solid #f3f3f3;
+  box-shadow: 0px 2px 4px rgba(#000, 0.1);
+
+  font-family: inherit;
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+
+  cursor: pointer;
+  transition: all 0.2s linear;
+
+  &:hover {
+    color: #fff;
+    background-color: darken(#fe5f1e, 5%);
+  }
+
+  &:active {
+    background-color: darken(#fe5f1e, 10%);
+    transform: translateY(1px);
+  }
+}
+
+.btnBack {
+  width: 21rem;
+  padding: 1.4rem 2.2rem;
+
+  color: #b6b6b6;
+}
+
+.btnPay {
+  width: 25rem;
+  padding: 1.7rem 2.2rem;
+
+  color: #fe5f1e;
+}

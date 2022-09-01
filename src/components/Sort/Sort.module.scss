@@ -1,0 +1,50 @@
+.sort {
+  position: relative;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+
+  span {
+    color: #fe5f1e;
+    cursor: pointer;
+  }
+}
+
+.popup {
+  overflow: hidden;
+  width: 17rem;
+  margin-top: 1.7rem;
+  padding: 1.1rem 0;
+
+  background: #ffffff;
+  border-radius: 1.1rem;
+  box-shadow: 0px 5px 15px rgba(#000, 0.09);
+
+  position: absolute;
+  right: 0;
+}
+
+.sortSection {
+  margin-right: 1rem;
+}
+
+.popupList {
+  overflow: hidden;
+
+  li {
+    padding: 1.3rem 2.2rem;
+    cursor: pointer;
+
+    &.active {
+      font-weight: bold;
+      color: #fe5f1e;
+    }
+
+    &.active,
+    &:hover {
+      background: rgba(254, 95, 30, 0.05);
+    }
+  }
+}

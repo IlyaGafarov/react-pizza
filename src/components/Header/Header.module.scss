@@ -1,0 +1,83 @@
+.header {
+	padding: 5rem 0;
+	border-bottom: 1px solid #f6f6f6;
+ }
+
+ .content {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	width: 90%;
+	margin: 0 auto;
+ }
+
+ .contentLeft {
+	display: flex;
+	align-items: center;
+ }
+
+ .headerLogo {
+	display: flex;
+	margin-right: 10rem;
+
+	p {
+	  color: #7b7b7b;
+	}
+ }
+
+ .pizzaLogo {
+	display: inline-block;
+	width: 7rem;
+ }
+
+ .title {
+	font-size: 3rem;
+	font-weight: 800;
+	letter-spacing: 1%;
+	text-transform: uppercase;
+	color: #181818;
+ }
+
+ .btn {
+	display: flex;
+	align-items: center;
+	padding: 12px 25px;
+
+	border: none;
+	background: #fe5f1e;
+	border-radius: 1rem;
+	box-shadow: 0 7px 17px -10px rgba(#fe5f1e, 0.8);
+
+	font-family: inherit;
+	font-size: inherit;
+	line-height: 1.1;
+	font-weight: 500;
+	color: #fff;
+
+	cursor: pointer;
+	transition: background 0.2s linear;
+
+	&:hover,
+	&:focus {
+	  background: darken(#fe5f1e, 5%);
+	}
+
+	span {
+	  font-size: 1.7rem;
+	  font-weight: 600;
+	}
+ }
+
+ .delimiter {
+	width: 1px;
+	height: 25px;
+	margin: 0 14px;
+
+	background-color: rgba(255, 255, 255, 0.25);
+ }
+
+ .btnLogo {
+	width: 2rem;
+	margin-right: 1rem;
+ }
