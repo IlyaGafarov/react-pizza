@@ -4,8 +4,8 @@ import cl from './Cart.module.scss'
 
 import { useSelector, useDispatch } from 'react-redux'
 
-import CartItem from '../../components/CartItem/CartItem'
-import CartEmpty from '../../components/CartEmpty/CartEmpty'
+import CartItem from '../../components/CartItem'
+import CartEmpty from '../../components/CartEmpty'
 import { selectCart } from '../../redux/cart/selectors'
 import { clearItems } from '../../redux/cart/slice'
 

@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 
 import cl from './FullPizza.module.scss'
-import Loader from '../../components/UI/Loader/Loader'
+import Loader from '../../components/UI/Loader'
 
 const FullPizza: React.FC = () => {
   const [pizza, setPizza] = useState<{

@@ -9,7 +9,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { selectCart } from '../../redux/cart/selectors'
 
-import Search from '../Search/Search'
+import Search from '../Search'
 
 const Header: React.FC = () => {
   const { items, totalPrice } = useSelector(selectCart)

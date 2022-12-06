@@ -1,11 +1,11 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 
-import Sort from '../components/Sort/Sort'
-import Categories from '../components/Categories/Categories'
+import Sort from '../components/Sort'
+import Categories from '../components/Categories'
 import Skeleton from '../components/PizzaBlock/Skeleton'
-import PizzaBlock from '../components/PizzaBlock/PizzaBlock'
-import Pagination from '../components/Pagination/Pagination'
+import PizzaBlock from '../components/PizzaBlock'
+import Pagination from '../components/Pagination'
 
 import { useAppDispatch } from '../redux/store'
 import { selectPizzaData } from '../redux/pizza/selectors'
